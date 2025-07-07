@@ -41,7 +41,7 @@ Track all matches and player performances along with the Leaderboard displaying 
 
 ✅ Word file: project proposal
 
-✅ Screenshots/GIFs for documentation
+✅ GIF for documentation
 
 ---
 
@@ -105,5 +105,5 @@ Software Engineering Undergraduate
 
 FAST NUCES, Lahore Campus
 
-📧 [Email](hasan.butt2005@gmail.com)
+📧 Email: hasan.butt2005@gmail.com
 
