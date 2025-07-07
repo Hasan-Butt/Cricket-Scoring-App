@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>matchmodescreen</class>
+ <widget class="QWidget" name="matchmodescreen">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>544</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#matchmodescreen {
+   background-image: url(:/images/setmatchbackground.png);  /* Set your image path */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+   
+}
+</string>
+  </property>
+  <widget class="QPushButton" name="homeButton">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>20</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#homeButton {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QPushButton#homeButton:hover {
+    background-color: #e0f7ff;
+    border: 2px solid #00aaff;
+   
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox_Over_Value">
+   <property name="geometry">
+    <rect>
+     <x>267</x>
+     <y>220</y>
+     <width>41</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnProceedToToss">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>490</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+	font-size:12px;
+}
+
+QPushButton:hover {
+    background-color: #e0f7ff;
+    border: 2px solid #00aaff;
+    
+}</string>
+   </property>
+   <property name="text">
+    <string>Proceed To Toss</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>220</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Select number of overs: </string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>260</y>
+     <width>258</width>
+     <height>210</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:20px;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Players - Team 2:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidgetTeamB">
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    gridline-color: #ddd;
+    font-size: 14px;
+    alternate-background-color: #f0f0f0;
+}
+
+QHeaderView::section {
+    background-color: #4a90e2;
+    color: white;
+    padding: 6px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+QTableWidget::item {
+    padding: 4px;
+}
+
+QTableWidget::item:hover {
+    background-color: #e1f5fe;
+}
+
+QTableWidget::item:selected {
+    background-color: #90caf9;
+    color: black;
+}
+</string>
+      </property>
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>false</bold>
+        </font>
+       </property>
+      </row>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Jursey Number</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Enter Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Role</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>91</x>
+     <y>171</y>
+     <width>208</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Team 1 Name: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEditTeamA"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>421</x>
+     <y>171</y>
+     <width>208</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="label_5">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Team 2 Name: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEditTeamB"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableWidget" name="tableWidgetTeamA">
+   <property name="geometry">
+    <rect>
+     <x>91</x>
+     <y>292</y>
+     <width>256</width>
+     <height>177</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    gridline-color: #ddd;
+    font-size: 14px;
+    alternate-background-color: #f0f0f0;
+}
+
+QHeaderView::section {
+    background-color: #4a90e2;
+    color: white;
+    padding: 6px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+QTableWidget::item {
+    padding: 4px;
+}
+
+QTableWidget::item:hover {
+    background-color: #e1f5fe;
+}
+
+QTableWidget::item:selected {
+    background-color: #90caf9;
+    color: black;
+}
+</string>
+   </property>
+   <row>
+    <property name="text">
+     <string>1.</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>2.</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>3.</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>4.</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>5.</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>6.</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>7.</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>8.</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>9.</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>10.</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>11.</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>Jursey Number</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Enter Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Enter Role</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>91</x>
+     <y>261</y>
+     <width>159</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:20px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Players - Team 1:</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>220</y>
+     <width>220</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Select Number of Players:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="spinBoxPlayerCount"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

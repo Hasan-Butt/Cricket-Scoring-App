@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TossScreen</class>
+ <widget class="QWidget" name="TossScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>544</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#TossScreen {
+    background-image: url(:/images/toss_screenbackground.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}</string>
+  </property>
+  <widget class="QRadioButton" name="ballFirst">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>168</x>
+     <y>327</y>
+     <width>101</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+font-size:15px;
+color:black;
+background-color:#e0f7ff;;
+border-radius: 10px;
+padding: 5px;
+}
+
+QRadioButton:hover {
+    background-color: blue;
+    border: 2px solid #00aaff;
+  	color:white;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Bowl
+First</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="batFirst">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>327</y>
+     <width>101</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+font-size:15px;
+color:black;
+background-color:#e0f7ff;;
+border-radius: 10px;
+padding: 5px;
+}
+
+QRadioButton:hover {
+    background-color: blue;
+    border: 2px solid #00aaff;
+  	color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>Bat
+First</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>470</y>
+     <width>37</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirmBtn">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>449</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+	font-size:14px;
+}
+
+QPushButton:hover {
+    background-color: #e0f7ff;
+    border: 2px solid #00aaff;
+    
+}</string>
+   </property>
+   <property name="text">
+    <string>Confirm Toss Result</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnToss">
+   <property name="geometry">
+    <rect>
+     <x>333</x>
+     <y>310</y>
+     <width>111</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>100</width>
+     <height>91</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTeamA">
+   <property name="geometry">
+    <rect>
+     <x>181</x>
+     <y>97</y>
+     <width>141</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size:20px;
+color:white;
+
+
+}</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTeamB">
+   <property name="geometry">
+    <rect>
+     <x>483</x>
+     <y>97</y>
+     <width>141</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size:20px;
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

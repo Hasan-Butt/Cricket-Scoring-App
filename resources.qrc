@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>background.png</file>
+        <file>newbackground.png</file>
+        <file>setmatchbackground.png</file>
+        <file>toss_screenbackground.png</file>
+        <file>coin.jpg</file>
+        <file>gamescreenbackground.png</file>
+        <file>mainbackground.png</file>
+        <file>summaryscreen.png</file>
+        <file>summarybackground.png</file>
+        <file>historybackgrond.png</file>
+        <file>leaderboardbackground.png</file>
+        <file>tournamentbackground.jpeg</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file>crowd.wav</file>
+        <file>crowdnew.wav</file>
+    </qresource>
+</RCC>

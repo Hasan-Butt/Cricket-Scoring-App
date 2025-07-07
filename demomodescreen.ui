@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DemoModeScreen</class>
+ <widget class="QWidget" name="DemoModeScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#DemoModeScreen {
+   background-image: url(:/images/leaderboardbackground.png);  /* Set your image path */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+   
+}
+</string>
+  </property>
+  <widget class="QPushButton" name="homeButton">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>20</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#homeButton {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QPushButton#homeButton:hover {
+    background-color: #e0f7ff;
+    border: 2px solid #00aaff;
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gifOverlayLabel">
+   <property name="geometry">
+    <rect>
+     <x>276</x>
+     <y>19</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size:20px;
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>🥇 Leaderboard Tab</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="leaderboardTabs">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>139</y>
+     <width>371</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::pane {
+    border: 1px solid #A0A8B0;
+    background: #F0F4F8;
+    border-top-left-radius: 6px;
+	font-size:20px;
+    border-top-right-radius: 6px;
+    top: -1px;
+}
+
+/* Remove default base under the tabs */
+QTabBar {
+    qproperty-drawBase: 0;
+}
+
+/* Unselected tabs */
+QTabBar::tab {
+    background: #FFFFFF;
+    color: #555F6A;
+    padding: 8px 20px;
+    margin-right: 2px;
+    border: 1px solid #A0A8B0;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    min-width: 100px;
+}
+
+/* Hover state */
+QTabBar::tab:hover {
+    background: #E4E9EF;
+}
+
+/* Selected tab */
+QTabBar::tab:selected {
+    background: #FFFFFF;
+    color: #0078D7;
+	 font-size:20px;
+    border-color: #0078D7;
+    border-bottom: 1px solid #F0F4F8; /* blend into pane */
+    font-weight: bold;
+}
+
+/* Push down unselected tabs slightly */
+QTabBar::tab:!selected {
+    margin-top: 4px;
+}
+
+</string>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>🏏Top Batsmans</string>
+    </attribute>
+    <widget class="QTableWidget" name="batsmenTable">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>0</y>
+       <width>371</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+  background: #fafafa;
+  gridline-color: #ddd;
+  font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  selection-background-color: #87cefa;
+  selection-color: #000;
+}
+
+/* 2) Header */
+QHeaderView::section {
+  background-color: #0055aa;
+  color: white;
+  font-weight: bold;
+  padding: 4px;
+  border: none;
+}
+
+/* 3) Alternating row colors (zebra stripes) */
+QTableWidget {
+  alternate-background-color: #f2f2f2;
+}
+QTableWidget::item:!selected:alternate {
+  background-color: #f2f2f2;
+}
+
+/* 4) Cell hover effect */
+QTableWidget::item:hover {
+  background-color: #e8f4fc;
+}
+
+/* 5) Vertical and horizontal grid lines */
+QTableView, QTableWidget {
+  show-decoration-selected: 1;
+}
+QTableWidget::item {
+  border-bottom: 1px solid #eee;
+  border-right:  1px solid #eee;
+}
+
+/* 6) Remove focus rectangle */
+QTableWidget::item:focus {
+  outline: none;
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>🔴Top Ballers</string>
+    </attribute>
+    <widget class="QTableWidget" name="bowlersTable">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-1</y>
+       <width>371</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+  background: #fafafa;
+  gridline-color: #ddd;
+  font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  selection-background-color: #87cefa;
+  selection-color: #000;
+}
+
+/* 2) Header */
+QHeaderView::section {
+  background-color: #0055aa;
+  color: white;
+  font-weight: bold;
+  padding: 4px;
+  border: none;
+}
+
+/* 3) Alternating row colors (zebra stripes) */
+QTableWidget {
+  alternate-background-color: #f2f2f2;
+}
+QTableWidget::item:!selected:alternate {
+  background-color: #f2f2f2;
+}
+
+/* 4) Cell hover effect */
+QTableWidget::item:hover {
+  background-color: #e8f4fc;
+}
+
+/* 5) Vertical and horizontal grid lines */
+QTableView, QTableWidget {
+  show-decoration-selected: 1;
+}
+QTableWidget::item {
+  border-bottom: 1px solid #eee;
+  border-right:  1px solid #eee;
+}
+
+/* 6) Remove focus rectangle */
+QTableWidget::item:focus {
+  outline: none;
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>📊Player Stats</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>311</width>
+       <height>211</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="playersTable">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>371</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+  background: #fafafa;
+  gridline-color: #ddd;
+  font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  selection-background-color: #87cefa;
+  selection-color: #000;
+}
+
+/* 2) Header */
+QHeaderView::section {
+  background-color: #0055aa;
+  color: white;
+  font-weight: bold;
+  padding: 4px;
+  border: none;
+}
+
+/* 3) Alternating row colors (zebra stripes) */
+QTableWidget {
+  alternate-background-color: #f2f2f2;
+}
+QTableWidget::item:!selected:alternate {
+  background-color: #f2f2f2;
+}
+
+/* 4) Cell hover effect */
+QTableWidget::item:hover {
+  background-color: #e8f4fc;
+}
+
+/* 5) Vertical and horizontal grid lines */
+QTableView, QTableWidget {
+  show-decoration-selected: 1;
+}
+QTableWidget::item {
+  border-bottom: 1px solid #eee;
+  border-right:  1px solid #eee;
+}
+
+/* 6) Remove focus rectangle */
+QTableWidget::item:focus {
+  outline: none;
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>Jersey</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Role</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QTableWidget" name="playerStatsTable">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>140</y>
+     <width>221</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+  background: #fafafa;
+  gridline-color: #ddd;
+  font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  selection-background-color: #87cefa;
+  selection-color: #000;
+}
+
+/* 2) Header */
+QHeaderView::section {
+  background-color: #0055aa;
+  color: white;
+  font-weight: bold;
+  padding: 4px;
+  border: none;
+}
+
+/* 3) Alternating row colors (zebra stripes) */
+QTableWidget {
+  alternate-background-color: #f2f2f2;
+}
+QTableWidget::item:!selected:alternate {
+  background-color: #f2f2f2;
+}
+
+/* 4) Cell hover effect */
+QTableWidget::item:hover {
+  background-color: #e8f4fc;
+}
+
+/* 5) Vertical and horizontal grid lines */
+QTableView, QTableWidget {
+  show-decoration-selected: 1;
+}
+QTableWidget::item {
+  border-bottom: 1px solid #eee;
+  border-right:  1px solid #eee;
+}
+
+/* 6) Remove focus rectangle */
+QTableWidget::item:focus {
+  outline: none;
+}</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>Stats</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Values</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>102</y>
+     <width>271</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size:15px;
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>🌟 For Top 5 Players and Player Stats</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="jerseyFilter">
+   <property name="geometry">
+    <rect>
+     <x>652</x>
+     <y>104</y>
+     <width>42</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>102</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size:15px;
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>Search by Jersey:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>332</x>
+     <y>449</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1E90FF; /* Dodger Blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color:#63B8FF; 
+}
+QPushButton:pressed {
+    background-color: #1874CD; /* Even darker on press */
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

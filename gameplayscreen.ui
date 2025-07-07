@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GamePlayScreen</class>
+ <widget class="QWidget" name="GamePlayScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>544</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>780</width>
+    <height>544</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>780</width>
+    <height>544</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#GamePlayScreen {
+    background-image: url(&quot;:/images/gamescreenbackground.png&quot;);
+    background-repeat: no-repeat;
+    background-position: center center;
+}</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>357</x>
+     <y>437</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #4CAF50;      /* green color */
+    color: white;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #45a049;
+border:2px solid #00aaff;
+color:blue;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>3 RUN</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>571</x>
+     <y>437</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #4CAF50;      /* green color */
+    color: white;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #45a049;
+border:2px solid #00aaff;
+color:blue;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>6 RUN</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>221</x>
+     <y>437</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #4CAF50;      /* green color */
+    color: white;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #45a049;
+border:2px solid #00aaff;
+color:blue;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>1 RUN</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>427</x>
+     <y>437</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #4CAF50;      /* green color */
+    color: white;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #45a049;
+border:2px solid #00aaff;
+color:blue;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>4 RUN</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>498</x>
+     <y>437</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #4CAF50;      /* green color */
+    color: white;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #45a049;
+border:2px solid #00aaff;
+color:blue;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>5 RUN</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>288</x>
+     <y>437</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #4CAF50;      /* green color */
+    color: white;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #45a049;
+border:2px solid #00aaff;
+color:blue;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>2 RUN</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_8">
+   <property name="geometry">
+    <rect>
+     <x>149</x>
+     <y>507</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: blue;      /* green color */
+    color: white;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #e0f7ff;
+border:2px solid #00aaff;
+color:black;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>Wicket</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_9">
+   <property name="geometry">
+    <rect>
+     <x>384</x>
+     <y>507</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: blue;      /* green color */
+    color: white;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #e0f7ff;
+border:2px solid #00aaff;
+color:black;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>No Ball</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_10">
+   <property name="geometry">
+    <rect>
+     <x>503</x>
+     <y>506</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: yellow;      /* green color */
+    color: blue;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #e0f7ff;
+border:2px solid #00aaff;
+color:black;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>Show Score Card</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>249</x>
+     <y>12</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:18px;
+}</string>
+   </property>
+   <property name="text">
+    <string>LIVE MATCH SCOREBOARD</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_23">
+   <property name="geometry">
+    <rect>
+     <x>149</x>
+     <y>277</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Control Settings</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_24">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>317</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Select Striker</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_25">
+   <property name="geometry">
+    <rect>
+     <x>149</x>
+     <y>377</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Bowling Team</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>257</x>
+     <y>320</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_2">
+   <property name="geometry">
+    <rect>
+     <x>258</x>
+     <y>385</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>151</x>
+     <y>225</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Team Score:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="teamScore">
+   <property name="geometry">
+    <rect>
+     <x>257</x>
+     <y>227</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>65</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="teamWickets">
+   <property name="geometry">
+    <rect>
+     <x>308</x>
+     <y>227</y>
+     <width>37</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>508</x>
+     <y>226</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Overs:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="teamOvers">
+   <property name="geometry">
+    <rect>
+     <x>569</x>
+     <y>229</y>
+     <width>37</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>  7.3</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>170</y>
+     <width>461</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QLabel" name="nameBaller">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Bowler</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_17">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Overs: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="bowlerOver">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>2.7</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_19">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Runs:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="bowlerRun">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>50</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_21">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Wickets: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="wickets">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>85</y>
+     <width>471</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="nameBat1">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Batter 1</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Runs:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="Bat1run">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+        </property>
+        <property name="text">
+         <string>100</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_9">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Balls:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="Ball1">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+        </property>
+        <property name="text">
+         <string>20</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="nameBat2">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Batter 2</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_11">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Runs:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="Bat2run">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+        </property>
+        <property name="text">
+         <string>100</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_15">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Balls:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="Ball2">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+        </property>
+        <property name="text">
+         <string>20</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>453</x>
+     <y>313</y>
+     <width>246</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_26">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Selected Batter 1: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="selectedBat1">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Select From List</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_27">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Selected Batter 2:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="selectedBat2">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Select From List</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_28">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Selected Bowler: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="selectedBowler">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Select From List</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>50</y>
+     <width>164</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <widget class="QLabel" name="nameTeamB">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Bowling team: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="nameteamB">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Team B</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>352</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Non-Striker</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_3">
+   <property name="geometry">
+    <rect>
+     <x>258</x>
+     <y>354</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>118</x>
+     <y>50</y>
+     <width>181</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Batting team: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="nameteamA">
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Team A</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="strike1">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>92</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:blue;
+font-size:20px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="strike2">
+   <property name="geometry">
+    <rect>
+     <x>145</x>
+     <y>122</y>
+     <width>21</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:blue;
+font-size:20px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>286</x>
+     <y>227</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:white;
+font-size:15px;
+}</string>
+   </property>
+   <property name="text">
+    <string>/</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_11">
+   <property name="geometry">
+    <rect>
+     <x>267</x>
+     <y>506</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: blue;      /* green color */
+    color: white;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color:#e0f7ff;
+border:2px solid #00aaff;
+color:black;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>Wide</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_12">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>437</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #4CAF50;      /* green color */
+    color: white;
+    border: none;
+    border-radius: 12px;
+ /*   padding: 10px 20px*/;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #45a049;
+border:2px solid #00aaff;
+color:blue;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+   </property>
+   <property name="text">
+    <string>DOT</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>83</x>
+     <y>50</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>51</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="popupLabel">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>140</y>
+     <width>37</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>101</x>
+     <y>274</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

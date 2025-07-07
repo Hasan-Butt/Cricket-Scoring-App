@@ -1,0 +1,14 @@
+# Ignore build files
+build/
+*.o
+*.exe
+*.dll
+*.pro.user
+*.layout
+*.log
+
+# Ignore Qt generated files
+*.autosave
+*.moc
+*.qrc.depends
+*.qrc.cpp

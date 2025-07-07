@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MatchSummaryScreen</class>
+ <widget class="QWidget" name="MatchSummaryScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>544</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MatchSummaryScreen {
+    background-image: url(&quot;:/images/summarybackground.png&quot;);
+    background-repeat: no-repeat;
+    background-position: center center;
+}</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>165</x>
+     <y>50</y>
+     <width>451</width>
+     <height>491</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::pane {
+    border: 1px solid #A0A8B0;
+    background: #F0F4F8;
+    border-top-left-radius: 6px;
+	font-size:20px;
+    border-top-right-radius: 6px;
+    top: -1px;
+}
+
+/* Remove default base under the tabs */
+QTabBar {
+    qproperty-drawBase: 0;
+}
+
+/* Unselected tabs */
+QTabBar::tab {
+    background: #FFFFFF;
+    color: #555F6A;
+    padding: 8px 20px;
+    margin-right: 2px;
+    border: 1px solid #A0A8B0;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    min-width: 100px;
+}
+
+/* Hover state */
+QTabBar::tab:hover {
+    background: #E4E9EF;
+}
+
+/* Selected tab */
+QTabBar::tab:selected {
+    background: #FFFFFF;
+    color: #0078D7;
+	 font-size:20px;
+    border-color: #0078D7;
+    border-bottom: 1px solid #F0F4F8; /* blend into pane */
+    font-weight: bold;
+}
+
+/* Push down unselected tabs slightly */
+QTabBar::tab:!selected {
+    margin-top: 4px;
+}
+
+</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>First Team</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableBatting">
+     <property name="geometry">
+      <rect>
+       <x>-3</x>
+       <y>48</y>
+       <width>451</width>
+       <height>192</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* ====== QTableWidget Styling ====== */
+
+/* The overall table */
+QTableWidget {
+    background: #FFFFFF;
+    gridline-color: #D1D9E6;
+    alternate-background-color: #F7F9FC;
+    selection-background-color: #CCE4FF;
+    selection-color: #004A9F;
+    border: 1px solid #A0A8B0;
+    border-radius: 4px;
+}
+
+/* Header sections */
+QHeaderView::section {
+    background: #0078D7;
+    color: #FFFFFF;
+    padding: 6px;
+    border: 1px solid #A0A8B0;
+    font-weight: bold;
+}
+
+/* Vertical headers (if used) */
+QHeaderView::vertical-header {
+    background: #F0F4F8;
+    border: 1px solid #A0A8B0;
+}
+
+/* Table cells */
+QTableWidget::item {
+    padding: 4px;
+}
+
+/* Remove focus rectangle except on selected cells */
+QTableWidget QTableCornerButton::section {
+    background: #0078D7;
+    border: 1px solid #A0A8B0;
+}
+
+/* Scrollbar styling (optional) */
+QScrollBar:vertical {
+    background: #F0F4F8;
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+    border: none;
+}
+QScrollBar::handle:vertical {
+    background: #A0A8B0;
+    min-height: 20px;
+    border-radius: 6px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #888F97;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;  /* hide arrows */
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QTableWidget" name="tableBowling">
+     <property name="geometry">
+      <rect>
+       <x>-3</x>
+       <y>282</y>
+       <width>451</width>
+       <height>192</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* ====== QTableWidget Styling ====== */
+
+/* The overall table */
+QTableWidget {
+    background: #FFFFFF;
+    gridline-color: #D1D9E6;
+    alternate-background-color: #F7F9FC;
+    selection-background-color: #CCE4FF;
+    selection-color: #004A9F;
+    border: 1px solid #A0A8B0;
+    border-radius: 4px;
+}
+
+/* Header sections */
+QHeaderView::section {
+    background: #0078D7;
+    color: #FFFFFF;
+    padding: 6px;
+    border: 1px solid #A0A8B0;
+    font-weight: bold;
+}
+
+/* Vertical headers (if used) */
+QHeaderView::vertical-header {
+    background: #F0F4F8;
+    border: 1px solid #A0A8B0;
+}
+
+/* Table cells */
+QTableWidget::item {
+    padding: 4px;
+}
+
+/* Remove focus rectangle except on selected cells */
+QTableWidget QTableCornerButton::section {
+    background: #0078D7;
+    border: 1px solid #A0A8B0;
+}
+
+/* Scrollbar styling (optional) */
+QScrollBar:vertical {
+    background: #F0F4F8;
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+    border: none;
+}
+QScrollBar::handle:vertical {
+    background: #A0A8B0;
+    min-height: 20px;
+    border-radius: 6px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #888F97;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;  /* hide arrows */
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>10</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:15px;
+
+
+}</string>
+     </property>
+     <property name="text">
+      <string>🏏 Batting Stats</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>6</x>
+       <y>249</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:15px;
+
+
+}</string>
+     </property>
+     <property name="text">
+      <string>⚾ Bowling Stats</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Second Team</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableBowling2">
+     <property name="geometry">
+      <rect>
+       <x>-2</x>
+       <y>282</y>
+       <width>451</width>
+       <height>192</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* ====== QTableWidget Styling ====== */
+
+/* The overall table */
+QTableWidget {
+    background: #FFFFFF;
+    gridline-color: #D1D9E6;
+    alternate-background-color: #F7F9FC;
+    selection-background-color: #CCE4FF;
+    selection-color: #004A9F;
+    border: 1px solid #A0A8B0;
+    border-radius: 4px;
+}
+
+/* Header sections */
+QHeaderView::section {
+    background: #0078D7;
+    color: #FFFFFF;
+    padding: 6px;
+    border: 1px solid #A0A8B0;
+    font-weight: bold;
+}
+
+/* Vertical headers (if used) */
+QHeaderView::vertical-header {
+    background: #F0F4F8;
+    border: 1px solid #A0A8B0;
+}
+
+/* Table cells */
+QTableWidget::item {
+    padding: 4px;
+}
+
+/* Remove focus rectangle except on selected cells */
+QTableWidget QTableCornerButton::section {
+    background: #0078D7;
+    border: 1px solid #A0A8B0;
+}
+
+/* Scrollbar styling (optional) */
+QScrollBar:vertical {
+    background: #F0F4F8;
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+    border: none;
+}
+QScrollBar::handle:vertical {
+    background: #A0A8B0;
+    min-height: 20px;
+    border-radius: 6px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #888F97;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;  /* hide arrows */
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>10</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:15px;
+
+
+}</string>
+     </property>
+     <property name="text">
+      <string>🏏 Batting Stats</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="tableBatting2">
+     <property name="geometry">
+      <rect>
+       <x>-2</x>
+       <y>48</y>
+       <width>451</width>
+       <height>192</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* ====== QTableWidget Styling ====== */
+
+/* The overall table */
+QTableWidget {
+    background: #FFFFFF;
+    gridline-color: #D1D9E6;
+    alternate-background-color: #F7F9FC;
+    selection-background-color: #CCE4FF;
+    selection-color: #004A9F;
+    border: 1px solid #A0A8B0;
+    border-radius: 4px;
+}
+
+/* Header sections */
+QHeaderView::section {
+    background: #0078D7;
+    color: #FFFFFF;
+    padding: 6px;
+    border: 1px solid #A0A8B0;
+    font-weight: bold;
+}
+
+/* Vertical headers (if used) */
+QHeaderView::vertical-header {
+    background: #F0F4F8;
+    border: 1px solid #A0A8B0;
+}
+
+/* Table cells */
+QTableWidget::item {
+    padding: 4px;
+}
+
+/* Remove focus rectangle except on selected cells */
+QTableWidget QTableCornerButton::section {
+    background: #0078D7;
+    border: 1px solid #A0A8B0;
+}
+
+/* Scrollbar styling (optional) */
+QScrollBar:vertical {
+    background: #F0F4F8;
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+    border: none;
+}
+QScrollBar::handle:vertical {
+    background: #A0A8B0;
+    min-height: 20px;
+    border-radius: 6px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #888F97;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;  /* hide arrows */
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>249</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:15px;
+
+
+}</string>
+     </property>
+     <property name="text">
+      <string>⚾ Bowling Stats</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>289</x>
+     <y>8</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size:20px;
+color:blue;
+}</string>
+   </property>
+   <property name="text">
+    <string>📋🏟️ Match Summary</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnBackToHome">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>20</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QPushButton:hover {
+    background-color: #e0f7ff;
+    border: 2px solid #00aaff;
+   
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

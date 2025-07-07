@@ -1,0 +1,1932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AuctionModeScreen</class>
+ <widget class="QWidget" name="AuctionModeScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>544</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>30</y>
+     <width>780</width>
+     <height>544</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>0</y>
+       <width>201</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:15px;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Auction Setup Screen ⚙️🔨</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="homeButton">
+     <property name="geometry">
+      <rect>
+       <x>700</x>
+       <y>0</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#homeButton {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QPushButton#homeButton:hover {
+    background-color: #e0f7ff;
+    border: 2px solid #00aaff;
+   
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>467</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #1E90FF; /* Dodger Blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color:#63B8FF; 
+}
+QPushButton:pressed {
+    background-color: #1874CD; /* Even darker on press */
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Start Auction</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>568</x>
+       <y>41</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:13px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Budget 💰</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="geometry">
+      <rect>
+       <x>568</x>
+       <y>80</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="suffix">
+      <string>PKR</string>
+     </property>
+     <property name="minimum">
+      <number>3000000</number>
+     </property>
+     <property name="maximum">
+      <number>100000000</number>
+     </property>
+     <property name="singleStep">
+      <number>100000</number>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="playerTable">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>250</y>
+       <width>401</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget#playerTable {
+  background: #fafafa;
+  gridline-color: #ddd;
+  font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  selection-background-color: #87cefa;
+  selection-color: #000;
+}
+
+/* 2) Header */
+QHeaderView::section {
+  background-color: #0055aa;
+  color: white;
+  font-weight: bold;
+  padding: 4px;
+  border: none;
+}
+
+/* 3) Alternating row colors (zebra stripes) */
+QTableWidget#performancesTable {
+  alternate-background-color: #f2f2f2;
+}
+QTableWidget#performancesTable::item:!selected:alternate {
+  background-color: #f2f2f2;
+}
+
+/* 4) Cell hover effect */
+QTableWidget#performancesTable::item:hover {
+  background-color: #e8f4fc;
+}
+
+/* 5) Vertical and horizontal grid lines */
+QTableView, QTableWidget {
+  show-decoration-selected: 1;
+}
+QTableWidget::item {
+  border-bottom: 1px solid #eee;
+  border-right:  1px solid #eee;
+}
+
+/* 6) Remove focus rectangle */
+QTableWidget::item:focus {
+  outline: none;
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Role</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Base Price</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Country</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>220</y>
+       <width>241</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Loaded Player Pool Review 👥📋</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>467</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #1E90FF; /* Dodger Blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color:#63B8FF; 
+}
+QPushButton:pressed {
+    background-color: #1874CD; /* Even darker on press */
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Load Player List</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>46</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:13px;
+color:black;
+}</string>
+     </property>
+     <property name="text">
+      <string>Enter Team Name and Add</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="removeTeam">
+     <property name="geometry">
+      <rect>
+       <x>406</x>
+       <y>50</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #1E90FF; /* Dodger Blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color:#63B8FF; 
+}
+QPushButton:pressed {
+    background-color: #1874CD; /* Even darker on press */
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Remove Team</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="teamText">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>49</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 14px;
+    color: #333333;
+    selection-background-color: #0078d4;
+    selection-color: white;
+}
+
+QLineEdit:focus {
+    border: 2px solid #0078d4;
+    background-color: #f0f8ff;
+}</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="teamList">
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>86</y>
+       <width>271</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QListWidget {
+    background-color: #f5f5f5;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 14px;
+    color: #333333;
+}
+
+QListWidget::item {
+    background-color: transparent;
+    padding: 8px 12px;
+    margin: 4px;
+    border-radius: 6px;
+}
+
+QListWidget::item:hover {
+    background-color: #e0f0ff;
+    color: #005792;
+}
+
+QListWidget::item:selected {
+    background-color: #0078d4;
+    color: white;
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="addTeam">
+     <property name="geometry">
+      <rect>
+       <x>292</x>
+       <y>50</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #1E90FF; /* Dodger Blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color:#63B8FF; 
+}
+QPushButton:pressed {
+    background-color: #1874CD; /* Even darker on press */
+    padding-left: 12px;
+    padding-top: 12px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Add Team</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:blue;
+font-size:15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Current Player</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:13px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Name:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>124</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:13px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Role:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>155</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:13px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Base Price:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:13px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Timer:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nameLabel">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>93</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:11px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Babar</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="roleLabel">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>127</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:11px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Bat</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="basePriceLabel">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>158</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:11px;
+}</string>
+     </property>
+     <property name="text">
+      <string>10000000</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="timerProgressBar">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>230</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="value">
+      <number>24</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>91</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:13px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Current Bid:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="currentBidLabel">
+     <property name="geometry">
+      <rect>
+       <x>661</x>
+       <y>92</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:11px;
+}</string>
+     </property>
+     <property name="text">
+      <string>120000</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>125</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:13px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Leading Team:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="leadingTeamLabel">
+     <property name="geometry">
+      <rect>
+       <x>662</x>
+       <y>126</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:11px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Lahore</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bid100KBtn">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>211</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base style for all QPushButton */
+QPushButton {
+    /* Gradient background */
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #6db3f2, stop:1 #1e69de
+    );
+    color: white;
+    border: 1px solid #1e69de;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Hover state */
+QPushButton:hover {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #7dc4f4, stop:1 #2a7ae0
+    );
+}
+
+/* Pressed state */
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1e69de, stop:1 #6db3f2
+    );
+    padding-top: 7px; /* slight shift */
+}
+
+/* Disabled state */
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #777777;
+    border: 1px solid #999999;
+}
+
+/* Example for a flat/icon-only button with objectName &quot;homeButton&quot; */
+QPushButton#homeButton {
+    background: transparent;
+    border: none;
+    padding: 4px;
+}
+
+/* If you need icon size via style */
+QPushButton {
+    /* adjust icon size if needed */
+    qproperty-iconSize: 24px;
+}
+
+/* Optional: different styles for primary vs secondary */
+QPushButton.primary {
+    background-color: #27ae60;
+    border: 1px solid #1e8449;
+}
+QPushButton.primary:hover {
+    background-color: #2ecc71;
+}
+QPushButton.secondary {
+    background-color: #f39c12;
+    border: 1px solid #d68910;
+}
+QPushButton.secondary:hover {
+    background-color: #f1c40f;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>+💸 100K</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bid500KBtn">
+     <property name="geometry">
+      <rect>
+       <x>652</x>
+       <y>211</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base style for all QPushButton */
+QPushButton {
+    /* Gradient background */
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #6db3f2, stop:1 #1e69de
+    );
+    color: white;
+    border: 1px solid #1e69de;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Hover state */
+QPushButton:hover {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #7dc4f4, stop:1 #2a7ae0
+    );
+}
+
+/* Pressed state */
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1e69de, stop:1 #6db3f2
+    );
+    padding-top: 7px; /* slight shift */
+}
+
+/* Disabled state */
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #777777;
+    border: 1px solid #999999;
+}
+
+/* Example for a flat/icon-only button with objectName &quot;homeButton&quot; */
+QPushButton#homeButton {
+    background: transparent;
+    border: none;
+    padding: 4px;
+}
+
+/* If you need icon size via style */
+QPushButton {
+    /* adjust icon size if needed */
+    qproperty-iconSize: 24px;
+}
+
+/* Optional: different styles for primary vs secondary */
+QPushButton.primary {
+    background-color: #27ae60;
+    border: 1px solid #1e8449;
+}
+QPushButton.primary:hover {
+    background-color: #2ecc71;
+}
+QPushButton.secondary {
+    background-color: #f39c12;
+    border: 1px solid #d68910;
+}
+QPushButton.secondary:hover {
+    background-color: #f1c40f;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>+💸 500K</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bid1MBtn">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>250</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base style for all QPushButton */
+QPushButton {
+    /* Gradient background */
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #6db3f2, stop:1 #1e69de
+    );
+    color: white;
+    border: 1px solid #1e69de;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Hover state */
+QPushButton:hover {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #7dc4f4, stop:1 #2a7ae0
+    );
+}
+
+/* Pressed state */
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1e69de, stop:1 #6db3f2
+    );
+    padding-top: 7px; /* slight shift */
+}
+
+/* Disabled state */
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #777777;
+    border: 1px solid #999999;
+}
+
+/* Example for a flat/icon-only button with objectName &quot;homeButton&quot; */
+QPushButton#homeButton {
+    background: transparent;
+    border: none;
+    padding: 4px;
+}
+
+/* If you need icon size via style */
+QPushButton {
+    /* adjust icon size if needed */
+    qproperty-iconSize: 24px;
+}
+
+/* Optional: different styles for primary vs secondary */
+QPushButton.primary {
+    background-color: #27ae60;
+    border: 1px solid #1e8449;
+}
+QPushButton.primary:hover {
+    background-color: #2ecc71;
+}
+QPushButton.secondary {
+    background-color: #f39c12;
+    border: 1px solid #d68910;
+}
+QPushButton.secondary:hover {
+    background-color: #f1c40f;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>+💸 1M</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="passBtn">
+     <property name="geometry">
+      <rect>
+       <x>652</x>
+       <y>250</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base style for all QPushButton */
+QPushButton {
+    /* Gradient background */
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #6db3f2, stop:1 #1e69de
+    );
+    color: white;
+    border: 1px solid #1e69de;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Hover state */
+QPushButton:hover {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #7dc4f4, stop:1 #2a7ae0
+    );
+}
+
+/* Pressed state */
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1e69de, stop:1 #6db3f2
+    );
+    padding-top: 7px; /* slight shift */
+}
+
+/* Disabled state */
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #777777;
+    border: 1px solid #999999;
+}
+
+/* Example for a flat/icon-only button with objectName &quot;homeButton&quot; */
+QPushButton#homeButton {
+    background: transparent;
+    border: none;
+    padding: 4px;
+}
+
+/* If you need icon size via style */
+QPushButton {
+    /* adjust icon size if needed */
+    qproperty-iconSize: 24px;
+}
+
+/* Optional: different styles for primary vs secondary */
+QPushButton.primary {
+    background-color: #27ae60;
+    border: 1px solid #1e8449;
+}
+QPushButton.primary:hover {
+    background-color: #2ecc71;
+}
+QPushButton.secondary {
+    background-color: #f39c12;
+    border: 1px solid #d68910;
+}
+QPushButton.secondary:hover {
+    background-color: #f1c40f;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>PASS</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>57</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:blue;
+font-size:15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Biding Panel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>0</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:blue;
+font-size:18px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Live Auction 💰</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>267</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+color:blue;
+font-size:15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Bid History Log 📜💰</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="historyTableWidget">
+     <property name="geometry">
+      <rect>
+       <x>168</x>
+       <y>289</y>
+       <width>401</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget QHeaderView::section {
+    background-color: #0078D7;  /* blue */
+    color: white;
+    padding: 4px;
+    border: 1px solid #005BB5;
+}
+
+/* Base table style */
+QTableWidget {
+    background-color: #ffffff;
+    gridline-color: #cccccc;
+    alternate-background-color: #f9f9f9;
+    selection-background-color: #4285f4;
+    selection-color: white;
+    font-size: 13px;
+}
+
+/* Alternating row colors */
+QTableWidget::item:!selected {
+    background-color: #ffffff;
+}
+QTableWidget::item:alternate {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect */
+QTableWidget::item:hover {
+    background-color: #e8f0fe;
+}
+
+/* Selected item */
+QTableWidget::item:selected {
+    background-color: #4285f4;
+    color: white;
+}
+
+/* Remove focus rectangle */
+QTableWidget::item:focus {
+    outline: none;
+}
+
+/* Scrollbar styling */
+QScrollBar:vertical {
+    background: #f0f0f0;
+    width: 10px;
+    margin: 0px;
+}
+QScrollBar::handle:vertical {
+    background: #c0c0c0;
+    min-height: 20px;
+    border-radius: 4px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+QScrollBar:horizontal {
+    background: #f0f0f0;
+    height: 10px;
+    margin: 0px;
+}
+QScrollBar::handle:horizontal {
+    background: #c0c0c0;
+    min-width: 20px;
+    border-radius: 4px;
+}
+
+/* Cell padding */
+QTableWidget::item {
+    padding: 4px 8px;
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>New Column</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QPushButton" name="forceAssignBtn">
+     <property name="geometry">
+      <rect>
+       <x>187</x>
+       <y>470</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base style for all QPushButton */
+QPushButton {
+    /* Gradient background */
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #6db3f2, stop:1 #1e69de
+    );
+    color: white;
+    border: 1px solid #1e69de;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Hover state */
+QPushButton:hover {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #7dc4f4, stop:1 #2a7ae0
+    );
+}
+
+/* Pressed state */
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1e69de, stop:1 #6db3f2
+    );
+    padding-top: 7px; /* slight shift */
+}
+
+/* Disabled state */
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #777777;
+    border: 1px solid #999999;
+}
+
+/* Example for a flat/icon-only button with objectName &quot;homeButton&quot; */
+QPushButton#homeButton {
+    background: transparent;
+    border: none;
+    padding: 4px;
+}
+
+/* If you need icon size via style */
+QPushButton {
+    /* adjust icon size if needed */
+    qproperty-iconSize: 24px;
+}
+
+/* Optional: different styles for primary vs secondary */
+QPushButton.primary {
+    background-color: #27ae60;
+    border: 1px solid #1e8449;
+}
+QPushButton.primary:hover {
+    background-color: #2ecc71;
+}
+QPushButton.secondary {
+    background-color: #f39c12;
+    border: 1px solid #d68910;
+}
+QPushButton.secondary:hover {
+    background-color: #f1c40f;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Force Assign</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="skipPlayerBtn">
+     <property name="geometry">
+      <rect>
+       <x>331</x>
+       <y>470</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base style for all QPushButton */
+QPushButton {
+    /* Gradient background */
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #6db3f2, stop:1 #1e69de
+    );
+    color: white;
+    border: 1px solid #1e69de;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Hover state */
+QPushButton:hover {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #7dc4f4, stop:1 #2a7ae0
+    );
+}
+
+/* Pressed state */
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1e69de, stop:1 #6db3f2
+    );
+    padding-top: 7px; /* slight shift */
+}
+
+/* Disabled state */
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #777777;
+    border: 1px solid #999999;
+}
+
+/* Example for a flat/icon-only button with objectName &quot;homeButton&quot; */
+QPushButton#homeButton {
+    background: transparent;
+    border: none;
+    padding: 4px;
+}
+
+/* If you need icon size via style */
+QPushButton {
+    /* adjust icon size if needed */
+    qproperty-iconSize: 24px;
+}
+
+/* Optional: different styles for primary vs secondary */
+QPushButton.primary {
+    background-color: #27ae60;
+    border: 1px solid #1e8449;
+}
+QPushButton.primary:hover {
+    background-color: #2ecc71;
+}
+QPushButton.secondary {
+    background-color: #f39c12;
+    border: 1px solid #d68910;
+}
+QPushButton.secondary:hover {
+    background-color: #f1c40f;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Skip Player</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>470</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base style for all QPushButton */
+QPushButton {
+    /* Gradient background */
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #6db3f2, stop:1 #1e69de
+    );
+    color: white;
+    border: 1px solid #1e69de;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Hover state */
+QPushButton:hover {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #7dc4f4, stop:1 #2a7ae0
+    );
+}
+
+/* Pressed state */
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1e69de, stop:1 #6db3f2
+    );
+    padding-top: 7px; /* slight shift */
+}
+
+/* Disabled state */
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #777777;
+    border: 1px solid #999999;
+}
+
+/* Example for a flat/icon-only button with objectName &quot;homeButton&quot; */
+QPushButton#homeButton {
+    background: transparent;
+    border: none;
+    padding: 4px;
+}
+
+/* If you need icon size via style */
+QPushButton {
+    /* adjust icon size if needed */
+    qproperty-iconSize: 24px;
+}
+
+/* Optional: different styles for primary vs secondary */
+QPushButton.primary {
+    background-color: #27ae60;
+    border: 1px solid #1e8449;
+}
+QPushButton.primary:hover {
+    background-color: #2ecc71;
+}
+QPushButton.secondary {
+    background-color: #f39c12;
+    border: 1px solid #d68910;
+}
+QPushButton.secondary:hover {
+    background-color: #f1c40f;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>End Auction</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:13px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Country:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="countryLabel">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>190</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:11px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Pakistan</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="statusLabel">
+     <property name="geometry">
+      <rect>
+       <x>661</x>
+       <y>167</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:11px;
+}</string>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>164</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:13px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Current Team:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_3">
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>10</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font-size:15px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Auction Summary 📊✅</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_10">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>380</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #6a9ff0, stop: 1 #1f5fcc
+    );
+    color: white;
+    border: 1px solid #1f5fcc;
+    border-radius: 6px;
+   
+    font-size: 14px;
+}
+
+/* Hover state */
+QPushButton:hover {
+    background-color: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #7aaaf2, stop: 1 #2a6fe0
+    );
+}
+
+/* Pressed state */
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #1f5fcc, stop: 1 #6a9ff0
+    );
+    padding-top: 7px; /* slight visual shift */
+}
+
+/* Disabled state */
+QPushButton:disabled {
+    background-color: #d0d0d0;
+    color: #888888;
+    border: 1px solid #a0a0a0;
+}
+
+/* Flat/icon-only button example by objectName */
+QPushButton#iconButton {
+    background: transparent;
+    border: none;
+    padding: 4px;
+}
+
+/* Example for primary/secondary roles via dynamic property */
+QPushButton[role=&quot;primary&quot;] {
+    background-color: #28a745;
+    border: 1px solid #1e7e34;
+}
+QPushButton[role=&quot;primary&quot;]:hover {
+    background-color: #3dc256;
+}
+QPushButton[role=&quot;secondary&quot;] {
+    background-color: #ffc107;
+    border: 1px solid #d39e00;
+}
+QPushButton[role=&quot;secondary&quot;]:hover {
+    background-color: #ffcd39;
+}</string>
+     </property>
+     <property name="text">
+      <string>Export as CSV</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>381</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #6a9ff0, stop: 1 #1f5fcc
+    );
+    color: white;
+    border: 1px solid #1f5fcc;
+    border-radius: 6px;
+    
+    font-size: 14px;
+}
+
+/* Hover state */
+QPushButton:hover {
+    background-color: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #7aaaf2, stop: 1 #2a6fe0
+    );
+}
+
+/* Pressed state */
+QPushButton:pressed {
+    background-color: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #1f5fcc, stop: 1 #6a9ff0
+    );
+    padding-top: 7px; /* slight visual shift */
+}
+
+/* Disabled state */
+QPushButton:disabled {
+    background-color: #d0d0d0;
+    color: #888888;
+    border: 1px solid #a0a0a0;
+}
+
+/* Flat/icon-only button example by objectName */
+QPushButton#iconButton {
+    background: transparent;
+    border: none;
+    padding: 4px;
+}
+
+/* Example for primary/secondary roles via dynamic property */
+QPushButton[role=&quot;primary&quot;] {
+    background-color: #28a745;
+    border: 1px solid #1e7e34;
+}
+QPushButton[role=&quot;primary&quot;]:hover {
+    background-color: #3dc256;
+}
+QPushButton[role=&quot;secondary&quot;] {
+    background-color: #ffc107;
+    border: 1px solid #d39e00;
+}
+QPushButton[role=&quot;secondary&quot;]:hover {
+    background-color: #ffcd39;
+}</string>
+     </property>
+     <property name="text">
+      <string>Back To Home</string>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="summaryTabWidget">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>60</y>
+       <width>411</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::pane {
+    border: 1px solid #A0A8B0;
+    background: #F0F4F8;
+    border-top-left-radius: 6px;
+	font-size:20px;
+    border-top-right-radius: 6px;
+    top: -1px;
+}
+
+/* Remove default base under the tabs */
+QTabBar {
+    qproperty-drawBase: 0;
+}
+
+/* Unselected tabs */
+QTabBar::tab {
+    background: #FFFFFF;
+    color: #555F6A;
+    padding: 8px 20px;
+    margin-right: 2px;
+    border: 1px solid #A0A8B0;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    min-width: 100px;
+}
+
+/* Hover state */
+QTabBar::tab:hover {
+    background: #E4E9EF;
+}
+
+/* Selected tab */
+QTabBar::tab:selected {
+    background: #FFFFFF;
+    color: #0078D7;
+	 font-size:20px;
+    border-color: #0078D7;
+    border-bottom: 1px solid #F0F4F8; /* blend into pane */
+    font-weight: bold;
+}
+
+/* Push down unselected tabs slightly */
+QTabBar::tab:!selected {
+    margin-top: 4px;
+}
+
+</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+      <widget class="QListWidget" name="listWidget">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>1</y>
+         <width>401</width>
+         <height>261</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QListWidget {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 4px;
+    outline: none;
+}
+
+/* Style for each item */
+QListWidget::item {
+    padding: 6px 10px;
+    margin: 2px 0;
+}
+
+/* Hover state for items */
+QListWidget::item:hover {
+    background: #f5f5f5;
+}
+
+/* Selected state for items */
+QListWidget::item:selected {
+    background: #4285f4;
+    color: white;
+    border-radius: 2px;
+}
+
+/* Disabled items */
+QListWidget::item:disabled {
+    color: #999999;
+}
+
+/* Scrollbar styling (optional) */
+QScrollBar:vertical {
+    background: #f0f0f0;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #c0c0c0;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+/* Horizontal scrollbar if needed */
+QScrollBar:horizontal {
+    background: #f0f0f0;
+    height: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #c0c0c0;
+    min-width: 20px;
+    border-radius: 4px;
+}</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

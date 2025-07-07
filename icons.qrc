@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>baticon.png</file>
+        <file>auctionicon.png</file>
+        <file>demoicon.png</file>
+        <file>exiticon.png</file>
+        <file>graphicon.png</file>
+        <file>settingsicon.png</file>
+        <file>statsicon.png</file>
+        <file>tournamenticon.png</file>
+        <file>homeicon.jpg</file>
+        <file>ballicon.png</file>
+        <file>scorecard.png</file>
+        <file>setticon.png</file>
+        <file>setticon2.png</file>
+    </qresource>
+</RCC>

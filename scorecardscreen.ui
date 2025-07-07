@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ScoreCardScreen</class>
+ <widget class="QWidget" name="ScoreCardScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>479</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#ScoreCardScreen {
+    background-image: url(&quot;:/images/summaryscreen.png&quot;);
+    background-repeat: no-repeat;
+    background-position: center center;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>184</x>
+     <y>6</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size:18px;
+
+color:blue;
+}</string>
+   </property>
+   <property name="text">
+    <string>📋 Score Card</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>58</x>
+     <y>38</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size:15px;
+
+
+}</string>
+   </property>
+   <property name="text">
+    <string>🏏 Batting Team</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>55</x>
+     <y>260</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size:15px;
+
+
+}</string>
+   </property>
+   <property name="text">
+    <string>⚾ Bowling Team</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableBatting">
+   <property name="geometry">
+    <rect>
+     <x>58</x>
+     <y>66</y>
+     <width>301</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    gridline-color: #ddd;
+    font-size: 14px;
+    alternate-background-color: #f0f0f0;
+}
+
+QHeaderView::section {
+    background-color: #4a90e2;
+    color: white;
+    padding: 6px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+QTableWidget::item {
+    padding: 4px;
+}
+
+QTableWidget::item:hover {
+    background-color: #e1f5fe;
+}
+
+QTableWidget::item:selected {
+    background-color: #90caf9;
+    color: black;
+}
+</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>Batsman</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Runs</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Balls</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>4s</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>6s</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>SR</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QTableWidget" name="tableBowling">
+   <property name="geometry">
+    <rect>
+     <x>57</x>
+     <y>290</y>
+     <width>301</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    gridline-color: #ddd;
+    font-size: 14px;
+    alternate-background-color: #f0f0f0;
+}
+
+QHeaderView::section {
+    background-color: #4a90e2;
+    color: white;
+    padding: 6px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+QTableWidget::item {
+    padding: 4px;
+}
+
+QTableWidget::item:hover {
+    background-color: #e1f5fe;
+}
+
+QTableWidget::item:selected {
+    background-color: #90caf9;
+    color: black;
+}
+</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>Bowler</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Overs</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Runs</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Wkts</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Econ</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="target">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>39</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font-size:12px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Needs 20 Runs to win</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
